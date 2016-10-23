@@ -1,0 +1,13 @@
+{
+  "name": "BirpDownloader",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "Download BRIP! playlists to a .zip file",
+  "default_locale": "en",
+  "content_scripts": [
+    {
+      "matches": ["http://www.birp.fm/playlist/*/*"],
+      "js": ["src/zip/jszip.js", "src/save/FileSaver.js", "src/inject/download.js"]
+    }
+  ]
+}
