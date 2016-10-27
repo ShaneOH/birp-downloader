@@ -27,16 +27,20 @@ const downloadPlaylist = () => {
 
 		return prev.then(() => {
 			const songFileName = url.substring(url.lastIndexOf('/') + 1);
-			const promise = fetch(url)
-							.then((res) => res.blob())
-							.catch((err) => console.log("Error: ", err));
+
+			const getSong = fetch(url)
+				.then(res => {
+					if(res.ok) {
+						zip.file(songFileName, res.blob());
+					}
+					return Promise.resolve();
+				})
 
 			i++;
 			const percent = Math.round((i / urls.length) * 100);
 			progress.innerHTML = "Downloading ... " + percent + "%";
-			zip.file(songFileName, promise);
 
-			return promise;
+			return getSong;
 		})
 
 	}, Promise.resolve())
