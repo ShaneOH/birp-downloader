@@ -4,6 +4,9 @@
   "manifest_version": 2,
   "description": "Download BRIP! playlists to a .zip file",
   "default_locale": "en",
+  "icons": {
+      "128": "media/birp.fm.png"
+  },
   "content_scripts": [
     {
       "matches": ["http://www.birp.fm/playlist/*/*"],
