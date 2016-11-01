@@ -1,8 +1,8 @@
 {
-  "name": "BirpDownloader",
-  "version": "0.0.1",
+  "name": "Birp Downloader",
+  "version": "0.0.2",
   "manifest_version": 2,
-  "description": "Download BRIP! playlists to a .zip file",
+  "description": "Download BRIP! tracks or whole playlists",
   "default_locale": "en",
   "icons": {
       "128": "media/birp.fm.png"
